@@ -1,13 +1,15 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-
+import Image from "next/image"
+import bg from './Component/rocket1.png'
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-
+import { GlobalContextProvider } from "./context/GlobalContext"
+import LinesBackground from "./Component/LinesBackground"
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -41,9 +43,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
+            <div className="relative graph-paper flex min-h-screen flex-col">
+              
+              <div className="absolute sm:mt-10 sm:block hidden inset-0 z-0">
+                <Image
+                    src={bg}
+                    alt="background image"
+                   width={200}
+                />
+            </div>
+            <SiteHeader />
+              <div className="flex-1 z-10">
+                <GlobalContextProvider>
+                {children}
+                </GlobalContextProvider>
+                
+                </div>
+              <div className="mt-8"></div>
             </div>
             <TailwindIndicator />
           </ThemeProvider>

@@ -37,7 +37,7 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: 229 71% 8%;
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -69,6 +69,39 @@
     --radius: 0.5rem;
   }
 }
+.blur {
+  backdrop-filter: blur(0px); /* Adjust the blur radius as needed */
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the background color and opacity as needed */
+}
+
+.light-blur-container {
+  position: relative;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('');
+  background-size: cover; /* or 'contain' or other values */
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* Other styles */
+}
+
+
+.light-blur-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px); /* Adjust the blur radius for a light effect */
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust the background color and opacity */
+  z-index: 1;
+}
+
+
+
 
 @layer base {
   * {
