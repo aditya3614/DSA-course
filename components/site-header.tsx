@@ -29,21 +29,7 @@ export function SiteHeader() {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                
-                
-              </div>
-            </Link>
+            
             <ThemeToggle />
           </nav>
         </div>

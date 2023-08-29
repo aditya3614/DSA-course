@@ -9,7 +9,7 @@ import { useGlobalContext } from '../context/GlobalContext';
 
  
 
-const page = () => {
+const Page = () => {
   
   const {currentDay,setCurrentDay,day2Access,day3Access,day4Access,day5Access,day6Access,day7Access,day8Access,day9Access,day10Access,setDay2Access,setDay3Access,setDay4Access,setDay5Access,setDay6Access,setDay7Access,setDay8Access,setDay9Access,setDay10Access}=useGlobalContext();
   
@@ -145,4 +145,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

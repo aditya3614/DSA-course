@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useGlobalContext } from '@/app/context/GlobalContext';
 import { buttonVariants } from '@/components/ui/button';
 import Confetti from 'react-confetti'
-const page=()=>{
+const Page=()=>{
 
     const [activeQuestion,setActiveQuestion]=useState(0);
     const [selectedAnswer,setSelectedAnswer]=useState(false);
@@ -140,4 +140,4 @@ const page=()=>{
     </div>
     );
 };
-export default page;
+export default Page;

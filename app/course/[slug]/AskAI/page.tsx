@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import {BsRobot} from 'react-icons/bs';
-import TypingAnimation from '@/app/Component/TypingAnimation';
+
 import { buttonVariants } from '@/components/ui/button';
 
 

@@ -9,7 +9,7 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { GlobalContextProvider } from "./context/GlobalContext"
-import LinesBackground from "./Component/LinesBackground"
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,

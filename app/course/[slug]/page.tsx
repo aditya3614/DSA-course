@@ -7,7 +7,7 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 
-const page = () => {
+const Page = () => {
   const router = usePathname();
   
   const {totalScore,setTotalScore}=useGlobalContext();
@@ -40,4 +40,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
